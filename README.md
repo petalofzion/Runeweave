@@ -13,8 +13,17 @@ Runeweave treats prompt design as weaving. A weave is defined in **LML** (a stru
 - **Reliquary** – list of enshrined weaves.
 - **Bestiary** – mock model profiles and stats.
 - **Crucible** – lens fusion stub.
+- **Choir** – choral interaction stub.
+- **Codex of Errors** – miscast compendium stub.
 
-Everything runs locally. The web app can be wrapped for desktop via a Tauri shell in `apps/desktop`. Persistence uses IndexedDB via Dexie and model calls use a deterministic MockAdapter. No telemetry or external network calls are made in Rite I.
+**Covenants**
+
+- Local-first.
+- No telemetry.
+- WCAG AA+ with Vigil Mode.
+- Svelte 5 runes for local state/effects; Svelte stores only cross-route.
+
+The web app can be wrapped for desktop via a Tauri shell in `apps/desktop`. Persistence uses IndexedDB via Dexie and model calls use a deterministic MockAdapter.
 
 ## Monorepo Structure
 

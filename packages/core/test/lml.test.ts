@@ -5,6 +5,9 @@ describe("compile(LML)", () => {
   it("handles empty", () => {
     expect(compile({})).toBe("");
   });
+  it("handles minimal invocation", () => {
+    expect(compile({ invocation: "Hi" })).toBe("Invocation: Hi");
+  });
   it("compiles key sections deterministically", () => {
     const out = compile({
       invocation: "Teach with reverent clarity.",

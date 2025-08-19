@@ -2,6 +2,13 @@
 
 This document is the authoritative reference for the current architecture. Every pull request must check the items below and update the checklist when the architecture changes.
 
+## Invariants
+
+- Local-first.
+- No telemetry.
+- WCAG AA+ with Vigil Mode.
+- Svelte 5 runes for local state/effects; Svelte stores only cross-route.
+
 ## Repo Layout
 
 - `apps/web` – SvelteKit + Tailwind web app
@@ -20,7 +27,7 @@ This document is the authoritative reference for the current architecture. Every
 - [ ] **R1-06**: `packages/adapters` defines `ModelAdapter` and a deterministic `MockAdapter`.
 - [ ] **R1-07**: `packages/data` supplies Dexie schema and helpers for IndexedDB.
 - [ ] **R1-08**: `packages/ui` hosts reusable Svelte components.
-- [ ] **R1-09**: Core modules exist — Veil of Unknowing, Scriptorium, Grimoire, Reliquary, Bestiary, Crucible.
+- [ ] **R1-09**: Core modules exist — Veil of Unknowing, Scriptorium, Grimoire, Reliquary, Bestiary, Crucible, Choir, Codex of Errors.
 - [ ] **R1-10**: LML is canonical; compiled prompts are cached and regenerable.
 - [ ] **R1-11**: Runtime is local-only with deterministic model calls; no external network requests.
 - [ ] **R1-12**: Tests use Vitest and `@testing-library/svelte` with deterministic outputs.

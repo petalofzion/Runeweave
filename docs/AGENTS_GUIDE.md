@@ -7,6 +7,22 @@
 - Lexicon is canonical: Veil, Scriptorium, Grimoire, Reliquary, Bestiary, Crucible, Weave, Relic, Folio.
 - LML is the canonical prompt representation; compiled prompt is a cache.
 
+## Repo Structure
+
+```
+apps/
+  web/       # SvelteKit app (browser)
+  desktop/   # Tauri wrapper (stub)
+packages/
+  core/      # types, LML, state machines, utilities
+  adapters/  # ModelAdapter implementations
+  data/      # Dexie schema/wrappers
+  ui/        # reusable Svelte components
+docs/
+  AGENTS_GUIDE.md
+  decisions/
+```
+
 ## Commit & PR
 
 - Use Conventional Commits: feat|fix|docs|chore|refactor(scope): summary

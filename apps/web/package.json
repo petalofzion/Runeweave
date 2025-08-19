@@ -20,7 +20,8 @@
     "autoprefixer": "^10.4.20",
     "@runeweave/core": "workspace:*",
     "@runeweave/adapters": "workspace:*",
-    "@runeweave/data": "workspace:*"
+    "@runeweave/data": "workspace:*",
+    "@runeweave/ui": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.5.4",

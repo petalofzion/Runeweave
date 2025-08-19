@@ -1,19 +1,16 @@
 {
-  "name": "@runeweave/data",
+  "name": "@runeweave/ui",
   "version": "0.0.1",
   "type": "module",
-  "main": "src/db.ts",
+  "main": "src/index.ts",
+  "svelte": "src/index.ts",
   "scripts": {
     "test": "vitest run",
     "lint": "echo \"(todo)\" && exit 0",
     "fmt": "echo \"(prettier via pre-commit)\" && exit 0"
   },
-  "dependencies": {
-    "dexie": "^4.0.7",
-    "zod": "^3.23.8"
-  },
   "devDependencies": {
-    "vitest": "^2.0.0",
-    "fake-indexeddb": "^4.0.2"
+    "svelte": "^5.0.0",
+    "vitest": "^2.0.0"
   }
 }

@@ -1,5 +1,6 @@
 <script lang="ts">
   import Veil from '$lib/components/Veil.svelte';
+  import { Button } from '@runeweave/ui';
 </script>
 
 <Veil />
@@ -11,4 +12,5 @@
     <a href="/bestiary" class="underline text-blue-600">Bestiary</a>
     <a href="/crucible" class="underline text-blue-600">Crucible</a>
   </nav>
+  <Button label="Demo" />
 </main>

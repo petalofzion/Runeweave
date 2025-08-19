@@ -8,6 +8,9 @@
     "lint": "echo \"(todo)\" && exit 0",
     "fmt": "echo \"(prettier via pre-commit)\" && exit 0"
   },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
   "devDependencies": {
     "vitest": "^2.0.0"
   }

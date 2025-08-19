@@ -14,7 +14,7 @@ This document is the authoritative reference for the current architecture. Every
 - [ ] **R1-00**: Monorepo managed by pnpm; Node 20 enforced with `.nvmrc`.
 - [ ] **R1-01**: Pre-commit runs formatting and basic hygiene checks.
 - [ ] **R1-02**: CI executes `pnpm -w lint`, `pnpm -w test`, and build steps.
-- [ ] **R1-03**: `apps/web` delivers the ritual UX via SvelteKit + Svelte 5 runes.
+- [ ] **R1-03**: `apps/web` delivers the ritual UX via SvelteKit + Svelte 5 runes (see [ADR-0001](decisions/0001-svelte5-runes.md)).
 - [ ] **R1-04**: `apps/desktop` wraps the web app in a Tauri shell.
 - [ ] **R1-05**: `packages/core` provides types, LML compiler, and state machines.
 - [ ] **R1-06**: `packages/adapters` defines `ModelAdapter` and a deterministic `MockAdapter`.

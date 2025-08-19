@@ -5,7 +5,12 @@
 
   let lmlText = $state('{\n  "invocation": ""\n}');
   let output = $state('');
+  let enshrined = $state(false);
   const adapter = new MockAdapter();
+
+  $effect(() => {
+    void db.weaves.get('demo').then(w => (enshrined = w?.enshrined ?? false));
+  });
   const compiled = $derived(() => {
     try {
       return compile(JSON.parse(lmlText || '{}'));
@@ -25,10 +30,27 @@
       createdAt: Date.now()
     });
   }
+
+  async function toggleEnshrine() {
+    enshrined = !enshrined;
+    await db.weaves.put({
+      id: 'demo',
+      title: 'Demo',
+      lml: JSON.parse(lmlText || '{}'),
+      compiled,
+      enshrined,
+      createdAt: Date.now()
+    });
+  }
 </script>
 
 <textarea bind:value={lmlText} class="w-full h-40 border" aria-label="LML input"></textarea>
-<button class="mt-2 px-4 py-2 border" onclick={cast}>Cast</button>
+<div class="mt-2 flex gap-2">
+  <button class="px-4 py-2 border" onclick={cast}>Cast</button>
+  <button class="px-4 py-2 border" onclick={toggleEnshrine}>
+    {enshrined ? '✦ Enshrined' : '✧ Enshrine'}
+  </button>
+</div>
 <div class="mt-4 space-y-2">
   <div>
     <h2 class="font-bold">Compiled</h2>

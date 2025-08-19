@@ -33,6 +33,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.21(postcss@8.5.6)
+      dexie:
+        specifier: ^4.0.7
+        version: 4.2.0
       postcss:
         specifier: ^8.4.41
         version: 8.5.6
@@ -49,6 +52,9 @@ importers:
       '@testing-library/svelte':
         specifier: ^5.1.0
         version: 5.2.8(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1))(vitest@2.1.9(jsdom@25.0.1))
+      fake-indexeddb:
+        specifier: ^4.0.2
+        version: 4.0.2
       typescript:
         specifier: ^5.5.4
         version: 5.9.2

@@ -6,6 +6,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
+    "pretest": "svelte-kit sync",
     "test": "vitest run",
     "lint": "echo \"(todo)\" && exit 0",
     "fmt": "echo \"(prettier via pre-commit)\" && exit 0"

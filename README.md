@@ -14,12 +14,25 @@ pnpm -w test   # runs package tests
 
 ## Structure
 
-- `apps/web`: SvelteKit app (TS + Tailwind)
-- `apps/desktop`: Tauri wrapper (stub)
-- `packages/core`: types, LML compiler, ritual state machines
-- `packages/adapters`: ModelAdapter interface + MockAdapter
-- `packages/data`: Dexie (IndexedDB) persistence
-- `packages/ui`: reusable Svelte components
+```
+runeweave/
+  apps/
+    web/       # SvelteKit app (browser)
+    desktop/   # Tauri wrapper (stub)
+  packages/
+    core/      # types, LML, state machines, utilities
+    adapters/  # ModelAdapter implementations
+    data/      # Dexie schema/wrappers
+    ui/        # reusable Svelte components
+  docs/
+    AGENTS_GUIDE.md
+    decisions/
+  .github/workflows/ci.yml
+  .editorconfig
+  pnpm-workspace.yaml
+  .nvmrc
+  package.json
+```
 
 See `docs/AGENTS_GUIDE.md` for agent workflow and `docs/decisions/*` for ADRs.
 

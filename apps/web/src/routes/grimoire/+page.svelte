@@ -1,11 +1,10 @@
 <script lang="ts">
   import { db } from '@runeweave/data/src/db';
-  import { onMount } from 'svelte';
   import type { Folio } from '@runeweave/core/src/types';
 
-  let folios: Folio[] = [];
-  onMount(async () => {
-    folios = await db.folios.toArray();
+  let folios = $state<Folio[]>([]);
+  $effect(() => {
+    void db.folios.toArray().then(f => (folios = f));
   });
 </script>
 

@@ -7,7 +7,7 @@ This document is the authoritative reference for the current architecture. Every
 - Local-first.
 - No telemetry.
 - WCAG AA+ with Vigil Mode.
-- Svelte 5 runes for local state/effects; Svelte stores only cross-route.
+- Local component state and effects must use Svelte 5 runes (`$state`, `$derived`, `$effect`); legacy lifecycles like `onMount` are forbidden. Svelte stores only cross-route.
 
 ## Repo Layout
 

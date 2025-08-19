@@ -1,6 +1,7 @@
 # Runeweave — Rite I Scaffold
 
 Runeweave is a local-first, browser-native toolkit for composing AI interactions. Rite I delivers a minimal ritual UX with a SvelteKit web app and a set of reusable TypeScript packages.
+The [Architecture Checklist](docs/ARCHITECTURE_CHECKLIST.md) is the **single source of truth** for Rite I architecture.
 
 ## Overview
 

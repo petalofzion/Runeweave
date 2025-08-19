@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --text: #000000;
+    --link: #1e3a8a;
+    --focus: #000000;
+  }
+
+  html[data-theme="vigil"] {
+    --bg: #000000;
+    --text: #ffffff;
+    --link: #00ffff;
+    --focus: #ffffff;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: underline;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    body {
+      transition:
+        background 0.3s,
+        color 0.3s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}

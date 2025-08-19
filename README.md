@@ -20,10 +20,14 @@ Runeweave treats prompt design as weaving. A weave is defined in **LML** (a stru
 
 - Local-first.
 - No telemetry.
-- WCAG AA+ with Vigil Mode.
+- WCAG AA+ with Vigil Mode (≥7:1 contrast, honors `prefers-reduced-motion`, keyboard navigable).
 - Svelte 5 runes for local state/effects; Svelte stores only cross-route.
 
 The web app can be wrapped for desktop via a Tauri shell in `apps/desktop`. Persistence uses IndexedDB via Dexie and model calls use a deterministic MockAdapter.
+
+### Vigil Mode
+
+Vigil Mode is a high-contrast theme toggle. It enforces a minimum 7:1 contrast ratio, respects the user's `prefers-reduced-motion` setting, and keeps the interface fully keyboard traversable with visible focus rings.
 
 ## Monorepo Structure
 

@@ -3,14 +3,18 @@
   import { MockAdapter } from '@runeweave/adapters/src/model';
   import { db } from '@runeweave/data/src/db';
 
-  let lmlText = '{\n  "invocation": ""\n}';
-  let compiled = '';
-  let output = '';
+  let lmlText = $state('{\n  "invocation": ""\n}');
+  let output = $state('');
   const adapter = new MockAdapter();
+  const compiled = $derived(() => {
+    try {
+      return compile(JSON.parse(lmlText || '{}'));
+    } catch {
+      return '';
+    }
+  });
 
   async function cast() {
-    const lml = JSON.parse(lmlText || '{}');
-    compiled = compile(lml);
     output = await adapter.invoke({ user: compiled });
     await db.folios.add({
       id: crypto.randomUUID(),
@@ -24,7 +28,7 @@
 </script>
 
 <textarea bind:value={lmlText} class="w-full h-40 border" aria-label="LML input"></textarea>
-<button class="mt-2 px-4 py-2 border" on:click={cast}>Cast</button>
+<button class="mt-2 px-4 py-2 border" onclick={cast}>Cast</button>
 <div class="mt-4 space-y-2">
   <div>
     <h2 class="font-bold">Compiled</h2>

@@ -13,7 +13,7 @@ export interface Weave {
   title: string;
   lml: LML;
   compiled: string;
-  lenses?: Record<string, unknown>;
+  lenses?: Record<string, unknown>; // lens parameters
   lineage?: { parentId?: ULID; hash?: string };
   tags?: string[];
   enshrined: boolean;
@@ -26,8 +26,8 @@ export interface Folio {
   model: string;
   input: string;
   output: string;
-  choir?: Record<string, unknown>;
-  absolution?: 'Absolve'|'Amend'|'Flag';
+  choir?: Record<string, unknown>; // adapter-specific metadata
+  absolution?: "Absolve" | "Amend" | "Flag";
   notes?: string;
   createdAt: number;
 }

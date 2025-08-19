@@ -1,0 +1,18 @@
+{
+  "name": "@runeweave/data",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "src/db.ts",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "echo \"(todo)\" && exit 0",
+    "fmt": "echo \"(prettier via pre-commit)\" && exit 0"
+  },
+  "dependencies": {
+    "dexie": "^4.0.7"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "fake-indexeddb": "^4.0.2"
+  }
+}

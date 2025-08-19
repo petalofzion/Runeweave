@@ -1,0 +1,14 @@
+{
+  "name": "@runeweave/core",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "echo \"(todo)\" && exit 0",
+    "fmt": "echo \"(prettier via pre-commit)\" && exit 0"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  }
+}

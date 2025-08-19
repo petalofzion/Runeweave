@@ -1,0 +1,31 @@
+{
+  "name": "runeweave-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"(no tests)\" && exit 0",
+    "lint": "echo \"(todo)\" && exit 0",
+    "fmt": "echo \"(prettier via pre-commit)\" && exit 0"
+  },
+  "dependencies": {
+    "@sveltejs/kit": "^2.5.0",
+    "@sveltejs/adapter-auto": "^3.2.2",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "tailwindcss": "^3.4.10",
+    "postcss": "^8.4.41",
+    "autoprefixer": "^10.4.20",
+    "@runeweave/core": "workspace:*",
+    "@runeweave/adapters": "workspace:*",
+    "@runeweave/data": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^6.3.0",
+    "vitest": "^2.0.0",
+    "@testing-library/svelte": "^5.1.0"
+  }
+}

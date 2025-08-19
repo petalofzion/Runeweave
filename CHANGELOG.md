@@ -1,0 +1,17 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [0.0.1] - 2025-??-??
+
+### Added
+
+- Initial scaffold.
+
+### Fixed
+
+- GitHub workflow ensures pnpm is installed before Node caching.
+- Corrected pre-commit configuration for Prettier mirror.
+- Addressed review feedback: CI order, veil runes, typed interfaces, Dexie generics.
+- Resolved pnpm version conflict and added pre-commit checks to CI.
+- Ensured pre-commit runs cleanly by formatting repo and ignoring pnpm-lock.yaml.

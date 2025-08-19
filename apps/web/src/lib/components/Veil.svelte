@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { nextVeilState, type VeilState } from '@runeweave/core/src/veil';
 
   let state = $state<VeilState>('covered');
@@ -10,7 +9,7 @@
     if (e.key === 'Escape') openNow();
   };
 
-  onMount(() => {
+  $effect.root(() => {
     state = nextVeilState(state, 'mount');
     let activity = false;
     const mark = () => (activity = true);

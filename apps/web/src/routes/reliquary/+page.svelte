@@ -1,11 +1,10 @@
 <script lang="ts">
   import { db } from '@runeweave/data/src/db';
-  import { onMount } from 'svelte';
   import type { Weave } from '@runeweave/core/src/types';
 
-  let weaves: Weave[] = [];
-  onMount(async () => {
-    weaves = await db.weaves.filter(w => w.enshrined).toArray();
+  let weaves = $state<Weave[]>([]);
+  $effect(() => {
+    void db.weaves.filter(w => w.enshrined).toArray().then(w => (weaves = w));
   });
 </script>
 

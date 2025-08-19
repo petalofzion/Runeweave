@@ -6,6 +6,7 @@
 - Tests and docs are required for every change. CI must be green.
 - Lexicon is canonical: Veil, Scriptorium, Grimoire, Reliquary, Bestiary, Crucible, Weave, Relic, Folio.
 - LML is the canonical prompt representation; compiled prompt is a cache.
+- Follow docs/ARCHITECTURE_CHECKLIST.md strictly; update it in every PR.
 
 ## Repo Structure
 

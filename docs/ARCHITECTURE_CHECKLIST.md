@@ -6,7 +6,7 @@ This document is the authoritative reference for the current architecture. Every
 
 - Local-first.
 - No telemetry.
-- WCAG AA+ with Vigil Mode.
+- WCAG AA+ with Vigil Mode (≥7:1 contrast, honors `prefers-reduced-motion`, keyboard navigable).
 - Local component state and effects must use Svelte 5 runes (`$state`, `$derived`, `$effect`); legacy lifecycles like `onMount` are forbidden. Svelte stores only cross-route.
 
 ## Repo Layout

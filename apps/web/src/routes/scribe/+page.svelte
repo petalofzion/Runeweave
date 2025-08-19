@@ -60,5 +60,5 @@
     <h2 class="font-bold">Output</h2>
     <pre>{output}</pre>
   </div>
-  <a href="/grimoire" class="underline text-blue-600">Go to Grimoire</a>
+  <a href="/grimoire" class="underline" title="Grimoire — Log">Go to Grimoire</a>
 </div>

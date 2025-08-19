@@ -1,11 +1,21 @@
 <script lang="ts">
   import { db } from '@runeweave/data/src/db';
+  import { countFoliosByModel } from '$lib/bestiary';
 
-  let casts = $state(0);
+  type ModelCount = { model: string; casts: number };
+  let models = $state<ModelCount[]>([]);
   $effect(() => {
-    void db.folios.count().then(c => (casts = c));
+    void db.folios.toArray().then(folios => {
+      const counts = countFoliosByModel(folios);
+      models = Object.entries(counts).map(([model, casts]) => ({
+        model,
+        casts,
+      }));
+    });
   });
 </script>
 
 <h1 class="text-xl font-bold mb-2">Bestiary</h1>
-<p>Mock Model — casts: {casts}</p>
+{#each models as { model, casts }}
+  <p>{model} — casts: {casts}</p>
+{/each}

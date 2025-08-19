@@ -11,7 +11,7 @@ jobs:
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          run_install: false
 
       - uses: actions/setup-node@v4
         with:
@@ -21,8 +21,13 @@ jobs:
       - name: Install
         run: pnpm -w install --frozen-lockfile
 
+      - name: Pre-commit
+        uses: pre-commit/action@v3.0.0
+        with:
+          extra_args: --all-files
+
       - name: Lint
-        run: pnpm -w lint || true
+        run: pnpm -w lint
 
       - name: Test
         run: pnpm -w test

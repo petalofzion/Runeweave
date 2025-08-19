@@ -1,0 +1,12 @@
+{
+  "name": "runeweave-desktop",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'desktop app not yet implemented'",
+    "build": "echo 'desktop app not yet implemented'",
+    "test": "echo '(no tests)' && exit 0",
+    "lint": "echo '(todo)' && exit 0",
+    "fmt": "echo '(prettier via pre-commit)' && exit 0"
+  }
+}

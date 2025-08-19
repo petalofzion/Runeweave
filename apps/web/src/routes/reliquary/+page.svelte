@@ -1,10 +1,16 @@
 <script lang="ts">
   import { db } from '@runeweave/data/src/db';
   import type { Weave } from '@runeweave/core/src/types';
+  import { liveQuery } from 'dexie';
 
   let weaves = $state<Weave[]>([]);
   $effect(() => {
-    void db.weaves.filter(w => w.enshrined).toArray().then(w => (weaves = w));
+    const sub = liveQuery(() =>
+      db.weaves.filter(w => w.enshrined).toArray()
+    ).subscribe({
+      next: w => (weaves = w)
+    });
+    return () => sub.unsubscribe();
   });
 </script>
 

@@ -18,16 +18,29 @@ This document is the authoritative reference for the current architecture. Every
 
 ## Tasks
 
-- [ ] **R1-00**: Monorepo managed by pnpm; Node 20 enforced with `.nvmrc`.
-- [ ] **R1-01**: Pre-commit runs formatting and basic hygiene checks.
-- [ ] **R1-02**: CI executes `pnpm -w lint`, `pnpm -w test`, and build steps.
-- [ ] **R1-03**: `apps/web` delivers the ritual UX via SvelteKit + Svelte 5 runes (see [ADR-0001](decisions/0001-svelte5-runes.md)).
-- [ ] **R1-04**: `apps/desktop` wraps the web app in a Tauri shell.
-- [ ] **R1-05**: `packages/core` provides types, LML compiler, and state machines.
-- [ ] **R1-06**: `packages/adapters` defines `ModelAdapter` and a deterministic `MockAdapter`.
-- [ ] **R1-07**: `packages/data` supplies Dexie schema and helpers for IndexedDB.
-- [ ] **R1-08**: `packages/ui` hosts reusable Svelte components.
-- [ ] **R1-09**: Core modules exist — Veil of Unknowing, Scriptorium, Grimoire, Reliquary, Bestiary, Crucible, Choir, Codex of Errors.
-- [ ] **R1-10**: LML is canonical; compiled prompts are cached and regenerable.
-- [ ] **R1-11**: Runtime is local-only with deterministic model calls; no external network requests.
-- [ ] **R1-12**: Tests use Vitest and `@testing-library/svelte` with deterministic outputs.
+| ID | Title | Depends On | Status | Owner | PR | Commit |
+|----|-------|------------|--------|-------|----|--------|
+| <!-- TASK:{ "id":"R1-00", "deps":[] } --> R1-00 | Monorepo managed by pnpm; Node 20 enforced with `.nvmrc`. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-01", "deps":[] } --> R1-01 | Pre-commit runs formatting and basic hygiene checks. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-02", "deps":[] } --> R1-02 | CI executes `pnpm -w lint`, `pnpm -w test`, and build steps. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-03", "deps":[] } --> R1-03 | `apps/web` delivers the ritual UX via SvelteKit + Svelte 5 runes (see [ADR-0001](decisions/0001-svelte5-runes.md)). | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-04", "deps":[] } --> R1-04 | `apps/desktop` wraps the web app in a Tauri shell. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-05", "deps":[] } --> R1-05 | `packages/core` provides types, LML compiler, and state machines. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-06", "deps":[] } --> R1-06 | `packages/adapters` defines `ModelAdapter` and a deterministic `MockAdapter`. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-07", "deps":[] } --> R1-07 | `packages/data` supplies Dexie schema and helpers for IndexedDB. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-08", "deps":[] } --> R1-08 | `packages/ui` hosts reusable Svelte components. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-09", "deps":[] } --> R1-09 | Core modules exist — Veil of Unknowing, Scriptorium, Grimoire, Reliquary, Bestiary, Crucible, Choir, Codex of Errors. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-10", "deps":[] } --> R1-10 | LML is canonical; compiled prompts are cached and regenerable. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-11", "deps":[] } --> R1-11 | Runtime is local-only with deterministic model calls; no external network requests. | — | TODO | — | — | — |
+| <!-- TASK:{ "id":"R1-12", "deps":[] } --> R1-12 | Tests use Vitest and `@testing-library/svelte` with deterministic outputs. | — | TODO | — | — | — |
+
+## Next Task
+
+The next task is the first numerically ordered TODO whose dependencies are all marked DONE.
+
+```pseudo
+for task in tasks.sort_by_id():
+    if task.status == "TODO" and all(dep.status == "DONE" for dep in task.deps):
+        return task.id
+return None
+```

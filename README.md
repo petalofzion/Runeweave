@@ -62,7 +62,7 @@ Each package can be developed independently with `pnpm -F <package> <script>`.
 
 - **Tests**: [Vitest](https://vitest.dev/) and [`@testing-library/svelte`](https://testing-library.com/docs/svelte-testing-library/intro/).
 - **Formatting/Linting**: [pre-commit](https://pre-commit.com/) runs Prettier and whitespace checks.
-- **CI**: GitHub Actions (Node 20) runs lint, tests and builds.
+- **CI**: GitHub Actions (Node 20) runs lint, tests and builds. Placeholder jobs for macOS and Windows exist for future platform coverage.
 - **Commit style**: Conventional Commits `feat|fix|docs|chore|refactor(scope): summary`.
 
 See [docs/AGENTS_GUIDE.md](docs/AGENTS_GUIDE.md) for the full agent workflow and [docs/decisions](docs/decisions) for ADRs.

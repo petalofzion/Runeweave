@@ -1,7 +1,6 @@
 # Runeweave — Rite I Scaffold
 
-Runeweave is a local-first, browser-native toolkit for composing AI interactions. Rite I delivers a minimal ritual UX with a SvelteKit web app and a set of reusable TypeScript packages.
-The [Architecture Checklist](docs/ARCHITECTURE_CHECKLIST.md) is the **single source of truth** for Rite I architecture.
+Runeweave is a local-first, browser-native toolkit for composing AI interactions. Rite I delivers a minimal ritual UX with a SvelteKit web app and a set of reusable TypeScript packages. The [Architecture Checklist](docs/ARCHITECTURE_CHECKLIST.md) is the **single source of truth** for Rite I architecture.
 
 ## Overview
 
@@ -65,12 +64,12 @@ Each package can be developed independently with `pnpm -F <package> <script>`.
 
 ## Packages
 
-| Package               | Purpose                                                |
-| --------------------- | ------------------------------------------------------ |
-| `@runeweave/core`     | Type definitions, LML compiler, ritual state machines. |
+| Package | Purpose |
+| --- | --- |
+| `@runeweave/core` | Type definitions, LML compiler, ritual state machines. |
 | `@runeweave/adapters` | ModelAdapter interface with deterministic MockAdapter. |
-| `@runeweave/data`     | Dexie wrapper for weaves, folios and model profiles.   |
-| `@runeweave/ui`       | Shared Svelte components (stub for future use).        |
+| `@runeweave/data` | Dexie wrapper for weaves, folios and model profiles. |
+| `@runeweave/ui` | Shared Svelte components (stub for future use). |
 
 ## Development Workflow
 

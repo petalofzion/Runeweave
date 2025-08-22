@@ -42,9 +42,4 @@ docs/
 
 ## Task Template (copy)
 
-**Goal:**
-**Files:**
-**Implementation notes:**
-**Tests:**
-**Docs:**
-**Acceptance:** (commands & expected outputs)
+**Goal:** **Files:** **Implementation notes:** **Tests:** **Docs:** **Acceptance:** (commands & expected outputs)

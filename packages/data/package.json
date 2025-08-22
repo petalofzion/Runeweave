@@ -6,7 +6,8 @@
   "scripts": {
     "test": "vitest run",
     "lint": "echo \"(todo)\" && exit 0",
-    "fmt": "echo \"(prettier via pre-commit)\" && exit 0"
+    "fmt": "echo \"(prettier via pre-commit)\" && exit 0",
+    "refresh-weaves": "node dist/migrate.js"
   },
   "dependencies": {
     "dexie": "^4.0.7",

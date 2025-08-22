@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { compile } from '@runeweave/core/src/lml';
+  import { compile, recompileIfStale } from '@runeweave/core/src/lml';
   import { MockAdapter } from '@runeweave/adapters/src/model';
   import { db } from '@runeweave/data/src/db';
 
@@ -9,7 +9,12 @@
   const adapter = new MockAdapter();
 
   $effect(() => {
-    void db.weaves.get('demo').then(w => (enshrined = w?.enshrined ?? false));
+    void db.weaves.get('demo').then(w => {
+      if (w) {
+        lmlText = JSON.stringify(w.lml, null, 2);
+        enshrined = w.enshrined;
+      }
+    });
   });
   const compiled = $derived(() => {
     try {
@@ -32,12 +37,19 @@
   }
 
   async function toggleEnshrine() {
+    let lml;
+    try {
+      lml = JSON.parse(lmlText || '{}');
+    } catch {
+      return;
+    }
     enshrined = !enshrined;
+    const compiledCache = recompileIfStale(lml, compiled);
     await db.weaves.put({
       id: 'demo',
       title: 'Demo',
-      lml: JSON.parse(lmlText || '{}'),
-      compiled,
+      lml,
+      compiled: compiledCache,
       enshrined,
       createdAt: Date.now()
     });

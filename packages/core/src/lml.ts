@@ -31,3 +31,14 @@ export function compile(lml: LML): string {
   }
   return lines.join("\n");
 }
+
+/**
+ * Return a compiled prompt, regenerating the cache when missing or stale.
+ *
+ * The caller may persist the returned string to keep the cache in sync with
+ * the canonical LML source.
+ */
+export function recompileIfStale(lml: LML, compiled?: string): string {
+  const fresh = compile(lml);
+  return compiled === fresh ? compiled : fresh;
+}

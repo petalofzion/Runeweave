@@ -18,6 +18,7 @@ This document is the authoritative reference for the current architecture. Every
 
 ## Tasks
 
+<!-- prettier-ignore -->
 | ID                                              | Title                                                                                                                 | Depends On | Status | Owner | PR  | Commit |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------- | ------ | ----- | --- | ------ |
 | <!-- TASK:{ "id":"R1-00", "deps":[] } --> R1-00 | Monorepo managed by pnpm; Node 20 enforced with `.nvmrc`.                                                             | —          | DONE   | —     | —   | —      |
@@ -30,8 +31,10 @@ This document is the authoritative reference for the current architecture. Every
 | <!-- TASK:{ "id":"R1-07", "deps":[] } --> R1-07 | `packages/data` supplies Dexie schema and helpers for IndexedDB.                                                      | —          | DONE   | —     | —   | —      |
 | <!-- TASK:{ "id":"R1-08", "deps":[] } --> R1-08 | `packages/ui` hosts reusable Svelte components.                                                                       | —          | DONE   | —     | —   | —      |
 | <!-- TASK:{ "id":"R1-09", "deps":[] } --> R1-09 | Core modules exist — Veil of Unknowing, Scriptorium, Grimoire, Reliquary, Bestiary, Crucible, Choir, Codex of Errors. | —          | TODO   | —     | —   | —      |
-| <!-- TASK:{ "id":"R1-10", "deps":[] } --> R1-10 | LML is canonical; compiled prompts are cached and regenerable.                                                        | —          | TODO   | —     | —   | —      |
-| <!-- TASK:{ "id":"R1-11", "deps":[] } --> R1-11 | Runtime is local-only with deterministic model calls; no external network requests.                                   | —          | DONE   | —     | —   | —      |
+| <!-- TASK:{ "id":"R1-10", "deps":[] } --> R1-10 | LML is canonical; compiled prompts are cached and regenerable.
+                                          | —          | DONE   | —     | —   | —      |
+| <!-- TASK:{ "id":"R1-11", "deps":[] } --> R1-11 | Runtime is local-only with deterministic model calls; no external network re
+quests.                                   | —          | DONE   | —     | —   | —      |
 | <!-- TASK:{ "id":"R1-12", "deps":[] } --> R1-12 | Tests use Vitest and `@testing-library/svelte` with deterministic outputs.                                            | —          | TODO   | —     | —   | —      |
 
 ## Next Task

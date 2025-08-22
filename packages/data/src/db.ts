@@ -1,5 +1,6 @@
 import Dexie, { Table } from "dexie";
-import type { Weave, Folio, ModelProfile } from "@runeweave/core/src/types";
+import type { Weave, Folio, ModelProfile } from "../../core/src/types";
+import { recompileIfStale } from "../../core/src/lml";
 
 export class RuneDB extends Dexie {
   // typed tables
@@ -12,6 +13,15 @@ export class RuneDB extends Dexie {
       weaves: "id, createdAt, enshrined, title",
       folios: "id, weaveId, createdAt, model",
       models: "id, lastSeenAt",
+    });
+
+    this.weaves.hook("reading", (obj) => {
+      const compiled = recompileIfStale(obj.lml, obj.compiled);
+      if (compiled !== obj.compiled) {
+        void this.weaves.update(obj.id, { compiled });
+        obj.compiled = compiled;
+      }
+      return obj;
     });
   }
 }

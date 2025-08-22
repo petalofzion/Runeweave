@@ -11,6 +11,8 @@
     <a href="/reliquary" class="underline" title="Reliquary — Favorites">Reliquary</a>
     <a href="/bestiary" class="underline" title="Bestiary — Models">Bestiary</a>
     <a href="/crucible" class="underline" title="Crucible — Fusion">Crucible</a>
+    <a href="/choir" class="underline" title="Choir — Voices">Choir</a>
+    <a href="/codex" class="underline" title="Codex — Errors">Codex</a>
   </nav>
   <Button label="Demo" />
 </main>

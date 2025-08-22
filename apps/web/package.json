@@ -30,6 +30,7 @@
     "vite": "^6.3.0",
     "vitest": "^2.0.0",
     "@testing-library/svelte": "^5.1.0",
-    "fake-indexeddb": "^4.0.2"
+    "fake-indexeddb": "^4.0.2",
+    "@sveltejs/vite-plugin-svelte": "^6.1.2"
   }
 }

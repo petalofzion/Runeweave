@@ -4,10 +4,10 @@
   "productName": "Runeweave",
   "version": "0.1.0",
   "build": {
-    "beforeDevCommand": "pnpm -C ../../web dev",
-    "beforeBuildCommand": "pnpm -C ../../web build",
+    "beforeDevCommand": "pnpm -C ../web dev",
+    "beforeBuildCommand": "pnpm -C ../web build",
     "devUrl": "http://localhost:5173",
-    "frontendDist": "../../web/dist"
+    "frontendDist": "../../web/build"
   },
   "app": {
     "windows": [

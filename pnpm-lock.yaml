@@ -35,9 +35,9 @@ importers:
       '@runeweave/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@sveltejs/adapter-auto':
-        specifier: ^3.2.2
-        version: 3.3.1(@sveltejs/kit@2.33.0(@sveltejs/vite-plugin-svelte@6.1.2(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))
+      '@sveltejs/adapter-static':
+        specifier: ^3.0.0
+        version: 3.0.9(@sveltejs/kit@2.33.0(@sveltejs/vite-plugin-svelte@6.1.2(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))
       '@sveltejs/kit':
         specifier: ^2.5.0
         version: 2.33.0(@sveltejs/vite-plugin-svelte@6.1.2(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1))
@@ -607,8 +607,8 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/adapter-auto@3.3.1':
-    resolution: {integrity: sha512-5Sc7WAxYdL6q9j/+D0jJKjGREGlfIevDyHSQ2eNETHcB1TKlQWHcAo8AS8H1QdjNvSXpvOwNjykDUHPEAyGgdQ==}
+  '@sveltejs/adapter-static@3.0.9':
+    resolution: {integrity: sha512-aytHXcMi7lb9ljsWUzXYQ0p5X1z9oWud2olu/EpmH7aCu4m84h7QLvb5Wp+CFirKcwoNnYvYWhyP/L8Vh1ztdw==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
@@ -1133,9 +1133,6 @@ packages:
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
-
-  import-meta-resolve@4.1.0:
-    resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
 
   is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
@@ -2086,10 +2083,9 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
-  '@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.33.0(@sveltejs/vite-plugin-svelte@6.1.2(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))':
+  '@sveltejs/adapter-static@3.0.9(@sveltejs/kit@2.33.0(@sveltejs/vite-plugin-svelte@6.1.2(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))':
     dependencies:
       '@sveltejs/kit': 2.33.0(@sveltejs/vite-plugin-svelte@6.1.2(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1))
-      import-meta-resolve: 4.1.0
 
   '@sveltejs/kit@2.33.0(@sveltejs/vite-plugin-svelte@6.1.2(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@6.3.5(jiti@1.21.7)(yaml@2.8.1))':
     dependencies:
@@ -2651,8 +2647,6 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
     optional: true
-
-  import-meta-resolve@4.1.0: {}
 
   is-binary-path@2.1.0:
     dependencies:

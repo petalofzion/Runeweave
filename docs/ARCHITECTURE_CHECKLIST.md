@@ -18,6 +18,7 @@ This document is the authoritative reference for the current architecture. Every
 
 ## Tasks
 
+<!-- prettier-ignore -->
 | ID                                              | Title                                                                                                                 | Depends On | Status | Owner | PR  | Commit |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------- | ------ | ----- | --- | ------ |
 | <!-- TASK:{ "id":"R1-00", "deps":[] } --> R1-00 | Monorepo managed by pnpm; Node 20 enforced with `.nvmrc`.                                                             | —          | DONE   | —     | —   | —      |

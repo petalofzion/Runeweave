@@ -1,6 +1,6 @@
-import { db } from './db';
-import { recompileIfStale } from '../../core/src/lml';
-import { fileURLToPath } from 'node:url';
+import { db } from "./db";
+import { recompileIfStale } from "../../core/src/lml";
+import { fileURLToPath } from "node:url";
 
 /**
  * Recompile any stale weave caches. Safe to run multiple times.
@@ -13,7 +13,7 @@ export async function refreshCompiledWeaves(): Promise<void> {
       if (compiled !== w.compiled) {
         await db.weaves.update(w.id, { compiled });
       }
-    })
+    }),
   );
 }
 

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { compile } from "../src/lml";
+import { compile, recompileIfStale } from "../src/lml";
 
 describe("compile(LML)", () => {
   it("handles empty", () => {
@@ -19,5 +19,22 @@ describe("compile(LML)", () => {
     expect(out).toMatchInlineSnapshot(`
 "Invocation: Teach with reverent clarity.\nPersona: Archivist [gentle, incisive]\nStyle: active-voice\nConstraints: Cite sources.\nContext: Logic 101\nExemplars: A || B\nGoals: accuracy\nTests: self_checklist"
 `);
+  });
+});
+
+describe("recompileIfStale", () => {
+  const base = { invocation: "Hello" };
+  it("reuses matching cache", () => {
+    const compiled = compile(base);
+    expect(recompileIfStale(base, compiled)).toBe(compiled);
+  });
+  it("regenerates when cache is missing", () => {
+    const fresh = compile(base);
+    expect(recompileIfStale(base)).toBe(fresh);
+  });
+  it("regenerates when cache is stale", () => {
+    const stale = compile({ invocation: "Old" });
+    const fresh = compile(base);
+    expect(recompileIfStale(base, stale)).toBe(fresh);
   });
 });

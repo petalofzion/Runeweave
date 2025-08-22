@@ -59,9 +59,16 @@ pnpm -w install     # install all workspace deps
 pnpm -w dev         # run apps/web in dev mode
 pnpm -w test        # run package tests
 pnpm -w build       # build the web app
+pnpm -C apps/desktop dev   # run the Tauri shell
+pnpm -C apps/desktop build # build the desktop app
 ```
 
 Each package can be developed independently with `pnpm -F <package> <script>`.
+
+### Desktop app
+
+The desktop wrapper in `apps/desktop` uses [Tauri](https://tauri.app/) to serve the built web assets.
+Use the scripts above to launch the shell during development or to produce a native build.
 
 ## Packages
 

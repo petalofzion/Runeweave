@@ -3,10 +3,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "echo 'desktop app not yet implemented'",
-    "build": "echo 'desktop app not yet implemented'",
-    "test": "echo '(no tests)' && exit 0",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "test": "vitest run",
     "lint": "echo '(todo)' && exit 0",
     "fmt": "echo '(prettier via pre-commit)' && exit 0"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "vitest": "^2.0.0"
   }
 }

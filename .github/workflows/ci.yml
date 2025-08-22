@@ -18,6 +18,8 @@ jobs:
           node-version: "20"
           cache: "pnpm"
 
+      - uses: dtolnay/rust-toolchain@stable
+
       - name: Install
         run: pnpm -w install --frozen-lockfile
 
@@ -34,6 +36,9 @@ jobs:
 
       - name: Build web
         run: pnpm -C apps/web build
+
+      - name: Build desktop
+        run: pnpm -C apps/desktop build
 
   build-macos:
     runs-on: macos-latest
